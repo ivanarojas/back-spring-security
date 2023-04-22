@@ -1,14 +1,17 @@
-package com.irojascorsico.websecurity.Users;
+package com.irojascorsico.websecurity.Auth;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import lombok.RequiredArgsConstructor;
+import com.irojascorsico.websecurity.Users.User;
+import com.irojascorsico.websecurity.Users.UserRepository;
+
+import lombok.AllArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
-public class UserService {
+@AllArgsConstructor
+public class AuthService {
 
     private final UserRepository userRepository;
 
@@ -31,5 +34,4 @@ public class UserService {
     {
         userRepository.save(user);
     }
-    
 }

@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.irojascorsico.websecurity.Users.Role;
 import com.irojascorsico.websecurity.Users.User;
-import com.irojascorsico.websecurity.Users.UserService;
 
 import lombok.AllArgsConstructor;
 
@@ -18,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @AllArgsConstructor
 public class AuthController {
     
-    private final UserService userService;
+    private final AuthService userService;
 
     @PostMapping(value="register")
     public void register(@RequestBody AuthRequest authRequest) {
