@@ -9,7 +9,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthRequest {
-    String email;
-    String password;
+public class AuthResponse {
+
+    String token;
+
+    public Object orElObject(Object object)
+    {return null;
+    }
+    
 }
