@@ -1,5 +1,4 @@
 package com.irojascorsico.websecurity.Users;
-import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 

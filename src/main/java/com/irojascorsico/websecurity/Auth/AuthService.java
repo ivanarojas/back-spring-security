@@ -5,7 +5,6 @@ import java.util.List;
 import org.aspectj.apache.bcel.classfile.EnclosingMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +13,6 @@ import com.irojascorsico.websecurity.Users.Role;
 import com.irojascorsico.websecurity.Users.User;
 import com.irojascorsico.websecurity.Users.UserRepository;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.var;
 
@@ -50,6 +48,7 @@ public class AuthService {
     public AuthResponse authenticate(AuthRequest request) {
         authManager.authenticate(
             new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+            
             var user = userRepository.findByEmail(request.getEmail()).orElseThrow();
             var jwtToken = jwtService.generateToken(user);
             return AuthResponse.builder()

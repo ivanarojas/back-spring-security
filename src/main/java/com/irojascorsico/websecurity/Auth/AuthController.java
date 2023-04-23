@@ -3,10 +3,6 @@ package com.irojascorsico.websecurity.Auth;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.irojascorsico.websecurity.Users.Role;
-import com.irojascorsico.websecurity.Users.User;
-
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.ResponseEntity;
